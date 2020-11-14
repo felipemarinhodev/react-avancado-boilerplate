@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src/* --max-warnings=0",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "yarn jest --watch"
   },
   "husky": {
     "hooks": {
@@ -17,7 +18,8 @@
   "lint-staged": {
     "src/**/*": [
       "yarn run eslint --fix",
-      "yarn run lint"
+      "yarn run lint",
+      "yarn test --bail"
     ]
   },
   "dependencies": {
@@ -27,6 +29,8 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.12.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.1.2",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.14.7",
     "@types/react": "^16.9.56",
