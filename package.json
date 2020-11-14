@@ -19,7 +19,7 @@
     "src/**/*": [
       "yarn run eslint --fix",
       "yarn run lint",
-      "yarn test --bail"
+      "yarn test --findRelatedTests --bail"
     ]
   },
   "dependencies": {
